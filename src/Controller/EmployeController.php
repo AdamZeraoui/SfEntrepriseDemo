@@ -19,8 +19,9 @@ class EmployeController extends AbstractController
         ]);
     }
 
+    #[Route('/employe', name: 'show_employe')]
     public function show() : Response
     {
-        #[Route('/employe', name: 'show_employe')]
+
     }
 }

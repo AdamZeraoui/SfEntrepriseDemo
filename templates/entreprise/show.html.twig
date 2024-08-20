@@ -1,10 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des Entreprises{% endblock %}
+{% block title %}Détail d'une Entreprises{% endblock %}
 
 {% block body %}
     <h1>Détail Entreprise</h1>
 
-    
+    <h2>{{entreprise.raisonSocial}}</h2>
+    <p>
+        Adresse : {{entreprise.adresse}} <br>
+        Date de création : {{entreprise.dateCreation | date("d-m-Y") }}
+    </p>
+
+
     
 {% endblock %}
