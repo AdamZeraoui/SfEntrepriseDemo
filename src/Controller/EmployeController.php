@@ -12,7 +12,8 @@ class EmployeController extends AbstractController
     #[Route('/employe', name: 'app_employe')]
     public function index(EmployeRepository $employeRepository): Response
     {
-        $employes = $employeRepository->findAll();
+        // $employes = $employeRepository->findAll();
+        $employes = $employeRepository->findBy([],["nom" => "ASC"]);
         return $this->render('employe/index.html.twig', [
             'employes' => $employes,
         ]);
